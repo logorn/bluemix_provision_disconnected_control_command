@@ -1,0 +1,21 @@
+---
+
+bluemix_user: vagrant
+bluemix_group: vagrant
+
+sources_path: "/data/bluemix/src"
+
+bluemix_vhosts:
+  - vhost: bluemix
+    vhost_link: 000-bluemix
+    name: bluemix-node
+    template: roles/bluemix/templates/vhost-common.conf
+
+private_key_ssh: id_rsa
+public_key_ssh: id_rsa.pub
+
+nodesource_gpg_key_url: https://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x1655A0AB68576280
+nodesource_gpg_key_id: 68576280
+nodesource_repo: deb https://deb.nodesource.com/node_4.x trusty main
+
+repositories_base_path: https://hub.jazz.net/git/rboujbel/DisconnectedControlCommand
